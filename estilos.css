@@ -1,0 +1,320 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.banner-header {
+  background-image: url('img/Diseño\ sin\ título\ \(5\)\ \(1\).png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 160px; /* Puedes ajustar el alto del banner */
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  background-color: #fefefe;
+  color: #333;
+}
+
+.logo-banner {
+  height: 100px; /* tamaño reducido para mejor responsividad */
+  width: auto;
+  object-fit: contain;
+  margin-right: 10px;
+}
+
+header {
+  background-color: #005bbb !important;
+  position: sticky;
+  top: 0;
+  z-index: 1100;
+}
+
+.dropdown .btn {
+  background-color: #005bbb;
+  border-color: #004699;
+  font-weight: 600;
+  color: white;
+}
+
+.dropdown .btn:hover {
+  background-color: #004699;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  flex-wrap: wrap; /* permite que se envuelvan en pantallas pequeñas */
+  gap: 0.5rem;
+}
+
+/* Logo y título juntos */
+header .d-flex.align-items-center.gap-2 {
+  flex-grow: 1;
+  min-width: 180px;
+}
+
+/* Título */
+header h1 {
+  font-size: 1.5rem;
+  color: white;
+  margin: 0;
+  line-height: 1;
+}
+
+
+
+/* Botón menú */
+.dropdown {
+  flex-shrink: 0;
+}
+
+/* BOTÓN MENÚ */
+.btn-group .btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #005bbb;
+  border-color: #004699;
+  color: white;
+  font-weight: 600;
+  padding: 0.375rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-group .btn:hover,
+.btn-group .btn:focus {
+  background-color: #004699;
+  color: white;
+}
+
+/* Íconos dentro del botón */
+.btn-group .btn img {
+  height: 20px;
+  width: auto;
+}
+
+/* MENÚ DESPLEGABLE */
+.dropdown-menu {
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  min-width: 200px;
+  padding: 0.5rem 0;
+}
+
+.dropdown-item {
+  color: #005bbb;
+  font-weight: 500;
+  padding: 0.5rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background-color: #e7f1ff;
+  color: #003366;
+}
+
+/* SECCIONES */
+section {
+  padding: 3rem 1rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* TITULOS DE SECCIONES */
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #005bbb;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* ICONOS DE TÍTULOS */
+section h2 img {
+  height: 48px;
+  width: auto;
+}
+
+/* CAJAS DE INFORMACIÓN */
+.info-box {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.info-box:hover {
+  transform: scale(1.02);
+}
+
+.info-box h4 {
+  margin-bottom: 0.75rem;
+  color: #005bbb;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+}
+
+/* FORMULARIO */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+form label {
+  font-weight: 600;
+  color: #005bbb;
+}
+
+input, textarea {
+  padding: 0.5rem;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: #005bbb;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 91, 187, 0.5);
+}
+
+button {
+  padding: 0.75rem;
+  background-color: #005bbb;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #004699;
+}
+
+/* MAPA */
+.ratio iframe {
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+/* FOOTER */
+footer {
+  background-color:#005bbbce;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 1rem;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* MEDIA QUERIES para mejor responsividad */
+
+@media (max-width: 576px) {
+  header h1 {
+    font-size: 1.25rem;
+    text-align: center;
+  }
+  section {
+    padding: 2rem 1rem;
+  }
+  section h2 img {
+    height: 36px;
+  }
+
+  /* Ajustes header para móvil */
+  header .d-flex.align-items-center.gap-2 {
+    min-width: auto;
+    flex-basis: 100%;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Centrar botón menú y ampliar su ancho */
+  .dropdown {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .dropdown .btn {
+    width: 90%;
+  }
+}
+
+/* Sobrescribir colores del header */
+header {
+  background-color: #13428f !important;  /* Cambia este color al que quieras */
+  color: white !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+
+/* Botón desplegable */
+.dropdown .btn {
+  background-color: #2a7eec !important;
+  border-color: #1669c1 !important;
+  color: white !important;
+  font-weight: 600 !important;
+}
+
+/* Hover del botón desplegable */
+.dropdown .btn:hover, 
+.dropdown .btn:focus {
+  background-color: #1669c1 !important;
+  color: white !important;
+}
+
+/* Items del menú desplegable */
+.dropdown-menu {
+  background-color: #f0f4ff !important;  /* Fondo claro */
+  border-color: #1669c1 !important;
+}
+
+.dropdown-item {
+  color: #1a73e8 !important;
+  font-weight: 500 !important;
+}
+
+/* Hover sobre items del menú */
+.dropdown-item:hover, 
+.dropdown-item:focus {
+  background-color: #cce0ff !important;
+  color: #0b3d91 !important;
+}
